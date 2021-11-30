@@ -8,17 +8,16 @@ param
     [Parameter(Mandatory = $false)] [string]$UseExistingAGName # Add the destination database to the existing AG group
 )
 
-#$SourceServerName='LGC-DEVC01-02\SS02'
+#$SourceServerName='server1'
 #$SourceDatabaseName='testdb1'
-#$DestServerName='LGC-DEVC01-02\SS02'
-#$DestServerName='EUISQL04'
-#$DestDatabaseName = 'testdb3'
+#$DestServerName='server2'
+#$DestDatabaseName = 'testdb2'
 #$RetainSecurity = 1
-#$UseExistingAGName = 'yes'
+#$UseExistingAGName = 'AG1'
 
 
 #Location where backup files are stored temporarily
-$share = '\\access.blob.ent.sos.eu\sqlbackup$'
+$share = '\\fileshare\sqlbackup'
 
 function ExtractSecurity {
     param ([string]$DestServerName , [string]$DestDatabase)
